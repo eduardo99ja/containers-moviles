@@ -19,7 +19,7 @@ class _TareasScreenState extends State<TareasScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.lightBlueAccent,
+      backgroundColor: Colors.purpleAccent,
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -33,7 +33,7 @@ class _TareasScreenState extends State<TareasScreen> {
                   child: Icon(
                     Icons.list,
                     size: 30.0,
-                    color: Colors.lightBlueAccent,
+                    color: Colors.purpleAccent,
                   ),
                   backgroundColor: Colors.white,
                   radius: 30.0,
@@ -78,10 +78,9 @@ class _TareasScreenState extends State<TareasScreen> {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          // showModalBottomSheet(context: context, builder: buildButtomSheet); //using created method
           showModalBottomSheet(
             context: context,
-            builder: (context) => AddTaskScreen(
+            builder: (context) => AgregarTareaScreen(
               addTaskCallback: (newTaskTitle) {
                 setState(() {
                   tasks.add(Tarea(name: newTaskTitle));
@@ -91,7 +90,7 @@ class _TareasScreenState extends State<TareasScreen> {
             ),
           ); //Using anonimous function
         },
-        backgroundColor: Colors.lightBlueAccent,
+        backgroundColor: Colors.purpleAccent,
         child: Icon(Icons.add),
       ),
     );

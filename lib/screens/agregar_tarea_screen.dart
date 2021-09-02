@@ -1,11 +1,12 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class AddTaskScreen extends StatelessWidget {
+class AgregarTareaScreen extends StatelessWidget {
   String? newTaskTitle;
   final Function addTaskCallback;
 
-  AddTaskScreen({Key? key, required this.addTaskCallback}) : super(key: key);
+  AgregarTareaScreen({Key? key, required this.addTaskCallback})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
